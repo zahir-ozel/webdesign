@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+
+    <link rel="stylesheet"  href="stil.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!--font Awesome iconları sayfada kulanma linki-->
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body{  /* sayfa içeriğinin kenar ve sayfa bölümlendirme ayarları  ust- icerik ve altmenuler diye*/
+            display: flex;
+            flex-direction: column;
+            font-family: "Josefin Sans", sans-serif; 
+background-color:whitesmoke; opacity: 0.8;
+  margin: 0px 10px 30px 15px ;
+  padding: 0px 0px 0px 0px;
+  border-radius: 40px 20px 10px 10px ;
+  height: 100%;
+}
+html{
+              background: url(arkaplan.jpg) no-repeat center center fixed; 
+              background-size: cover;
+              overflow-x: hidden;
+              font-family: "Josefin Sans", sans-serif; 
+              height: 100%;
+              /* sayfa arkaplanı sabitleme ve  yatay kaydırma çubuğunu pasif yapma */
+}
+.slogan{
+    color: black;
+}
+.ust{ padding: 5px;
+        text-align: right;
+            
+        }
+.icerik { 
+            padding: 20px 0px 50px 0px;
+            background-color: white;
+            flex: 1;
+            overflow:hidden;
+            vertical-align:center;
+            text-align: center;
+        }
+ .altmenuler{ /* alt menulleri sayfa altına sabitleme*/
+    background-color:lightgray;
+    position: fixed;
+    left: -10px;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    padding:5px;
+    
+ }
+/* sayfa mobile uyumlu hale getirmek için yapılan
+ayarlamar  ve sayfa özeliklerine göre  öğeler ve öğe özelikelri değişmektedir
+ör: logo arama çubuğu ve simgeleri
+ alt slogan görünürlüğü , metin kutusu özelikleri*/
+@media (min-width: 600px){
+    html{height: 100%;}
+#logo{visibility: visible;}
+#logo2{visibility: hidden;}
+#key{
+    font-size: 20px;
+}
+#mic{
+    font-size: 20px;
+}
+input[type=text]{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+         border-radius: 40px;
+         border: 1px solid #d0d3d4;
+         color: #7a7c79;
+         width: 350px;
+         height: 50px;
+         padding-left: 10px;
+         font-size: 16px;
+        }
+input[type=text]:focus {
+         outline: none;
+         border-bottom: 3px solid #d0d3d4;
+         border-top: 1px solid #d0d3d4;
+         border-left: 3px solid #d0d3d4;
+         border-right: 1px solid #d0d3d4;
+         color: #2d9fd9;
+         font-size: 20px;
+    }
+    
+#kutu {
+display: flex;
+flex-wrap: wrap;
+}
+#kutu > div{
+background-color:transparent;
+font-size: 14px;
+margin: 5px;
+padding: 5px;
+width: 25%;
+text-align: center;
+display: inline-block;
+}
+
+#icon{
+background:url(ara3.png);
+background-repeat: no-repeat; 
+background-position: 2px 3px;
+position: relative;
+}
+}
+@media (max-width: 599px){
+body{ height: 150%;}
+#logo{visibility: hidden;}
+#logo2{visibility: visible;}
+#key{
+    font-size: 15px;
+}
+#mic{
+    font-size: 15px;
+}
+input[type=text]{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+         border-radius: 40px;
+         border: 1px solid #d0d3d4;
+         color: #7a7c79;
+         width: 200px;
+         height: 30px;
+         padding-left: 10px;
+         font-size: 12px;
+        }
+input[type=text]:focus {
+         outline: none;
+         border-bottom: 3px solid #d0d3d4;
+         border-top: 1px solid #d0d3d4;
+         border-left: 3px solid #d0d3d4;
+         border-right: 1px solid #d0d3d4;
+         color: #2d9fd9;
+         font-size: 16px;}
+    * {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.slogan{ visibility: hidden;}
+#kutu {
+}
+#kutu > div{
+background-color:transparent;
+font-size: 14px;
+margin: 0px;
+padding: 0px;
+text-align: center;
+}
+#icon{
+background-image:url(ara4.png); 
+background-repeat: no-repeat; 
+background-position: 2px 3px;
+}
+#btnlar {
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+}
+#btnlr > button{
+background-color:transparent;
+font-size: 13px;
+margin: 5px 20px 3px;
+padding: 3px;
+}
+
+.ustmenu .sutun{
+        float:left;
+        width:30%;
+        padding:0px;
+        font-size: 0.5rem;
+} 
+}
+hr{
+     width: 90%;margin: 0px;
+     padding: 0px;
+     text-align: center;
+}
+
+button[type=submit]{
+border: 1px solid #d0d3d4;
+border-radius: 10px;
+margin: 11px 4px;
+padding: 0 16px;
+height: 36px;
+text-align: center;
+cursor: pointer; }
+ button[type=submit]:hover {
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    color: #4285F4;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    height: 36px;
+    text-align: center;
+    cursor: pointer;}
+
+button[type=submit]:focus {
+    outline: none;
+    border: 3px solid #4285F4;
+    background-color:#d0d3d4;
+   border-bottom: 1px;
+   border-top: 1px;
+    border-radius: 10px;
+    color: #4285F4;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    height: 36px;
+    text-align: center;
+    cursor: pointer; }
+    #logo{
+        text-align: center;
+        margin-top: 3%;
+
+    }
+    #logo2{
+        text-align: center;
+        margin-top: -5%;
+    }
+
+    /*  alt bolum sabitleme işlemi flex le yaptım gerek kalmadı 
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    padding:15px;
+    background-color: lightgray;
+} */
+    </style>
+</head>
+<body><label for="icon">  <!--sayfada herhangi bir yere tıklandığında arama kutusuna focuslamak için label tagi kullanılmıştır-->
+    <div class="ust" >  
+        <ul class="ustmenu">  
+            <li> <a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
+            <li> <a href="https://www.google.com.tr/imghp?hl=tr&ogbl">Görseller</a> </li> <!--liste özelikelri yardımıyla üst menü oluşturma-->
+            <li > <span style="font-size: large;"> <a href="https://www.google.com.tr/intl/tr/about/products"><i class="fas fa-bars" ></i></a>  </span>
+                <div class="sutun">
+                            <ul>
+                                <li><a href="https://mail.google.com/mail/"> <i class="fas fa-envelope" style="font-size:1.5rem;color: cornflowerblue;" ></i> <br> Gmail</a></li>
+                                <li><a href="https://drive.google.com/?authuser=0"> <i class="fab fa-google-drive" style="font-size: 1.5rem; color: darkgoldenrod;"></i>  <br> Drive </a> </li>
+                                <li><a href="https://docs.google.com/document/?usp=docs_ald&authuser=0"><i class="fas fa-file-alt" style="font-size: 1.5rem; color: mediumblue;"></i> <br>Dökümanlar</a></li>
+                                <li><a href="https://docs.google.com/spreadsheets/?usp=sheets_ald&authuser=0"><i class="far fa-file-excel" style="font-size: 1.5rem; color: limegreen;"></i>  <br>E tablolar</a></li>
+                                <li><a href="https://docs.google.com/presentation/?usp=slides_ald&authuser=0"><i class="far fa-file-powerpoint" style="font-size: 1.5rem; color: maroon;"></i> <br>Slaytlar</a></li>
+                                <li><a href="https://calendar.google.com/calendar"><i class="fas fa-calendar-alt" style="font-size: 1.5rem; color: palegreen;"></i>  <br>Takvim</a></li>
+                                <li><a href="https://chat.google.com/"><i class="far fa-comments" style="font-size: 1.5rem;color: palevioletred;"></i> <br>Sohbet</a></li>
+                                <li><a href="https://currents.google.com/"><i class="fal fa-sack-dollar" style="font-size: 1.5rem;color: green;"></i>  <br>Current </a></li>
+                                <li><a href="https://contacts.google.com/?hl=tr"> <i class="fas fa-users" style="font-size: 1.5rem; color: navy;"></i>  <br> Kişiler</a></li>
+                            <hr><li><a href="https://groups.google.com/d/homeredir?hl=tr"><i class="fas fa-users-cog" style="font-size: 1.5rem;color: orangered;"></i>  <br>Gruplar</a></li>
+                                <li><a href="https://www.youtube.com/?gl=TR"><i class="fab fa-youtube" style="font-size: 1.5rem;color: red;"></i>  <br>Youtube</a></li>
+                                <li><a href="https://maps.google.com.tr/maps?hl=tr"><i class="fas fa-map-marked" style="font-size: 1.5rem;color:royalblue"></i>  <br>Haritalar</a></li>
+                                <li><a href="https://news.google.com/"><i class="far fa-newspaper" style="font-size: 1.5rem;color: yellow;"></i>  <br>Haberler</a></li>
+                                <li><a href="https://ads.google.com/home/?subid=ww-ww-et-g-aw-a-vasquette_ads_1!o2"><i class="fab fa-google-plus" style="font-size: 1.5rem;color: brown;"></i>  <br>Google Ads</a></li> 
+                                <li><a href="https://photos.google.com/?pageId=none"><i class="fas fa-images" style="font-size: 1.5rem;color: dodgerblue;"></i>  <br>Fotoğraflar</a></li> 
+                                <li><a href="https://translate.google.com.tr/?hl=tr"> <i class="fas fa-language" style="font-size: 1.5rem;color: darkgray;"></i>  <br>Çeviri</a></li> 
+                                <li><a href="https://ediscovery.google.com/discovery/"> <i class="fab fa-app-store" style="font-size: 1.5rem;color: #19191a;"></i>  <br>Apps Casası</a></li> 
+                                <li><a href="https://hangouts.google.com/"><i class="fas fa-users" style="font-size: 1.5rem;color: blue;"></i>  <br>Hangouts</a></li> 
+                                <li><a href="https://docs.google.com/forms/?authuser=0&usp=forms_ald"><i class="fab fa-wpforms" style="font-size: 1.5rem; color: darkmagenta;"></i>  <br>Formlar</a></li> 
+                                <li><a href="https://keep.google.com/u/0"><i class="fas fa-pager" style="font-size: 1.5rem;color: crimson;"></i>  <br>Keep</a></li> 
+                                <li><a href="https://jamboard.google.com/?authuser=0&usp=jam_ald"><i class="fas fa-users" style="font-size: 1.5rem;color: coral;"></i>  <br>Janboard</a></li> 
+                                <li><a href="https://cloudsearch.google.com/cloudsearch"><i class="fas fa-cloud-upload-alt" style="font-size: 1.5rem;color: chocolate;"></i>  <br>Cloud Search</a></li> 
+                                <li><a href="https://earth.google.com/web/"><i class="fas fa-globe-europe" style="font-size: 1.5rem;color: blue;"></i>  <br>Earths</a></li> 
+                            <hr><li><a href="http://classroom.google.com/"><i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem;color: chartreuse;"></i>  <br>Clasroom</a></li> 
+                                <li><a href="http://www.google.com/cloudprint/"><i class="fab fa-mixcloud" style="font-size: 1.5rem;color: darkviolet;"></i>  <br>Cloud</a></li> 
+                            </ul>
+                    </div>
+            </li>
+        </ul>  
+    </div> <div class="icerik">
+        <!-- logolar ve arama kutusu özelikleri çözünürlüğe göre değişmektedir
+        logoları ve diğer görseleri inddirdim
+    ancak fazla dosya olmasın diye url bağlantısı kulandım-->
+        <div id="logo"> <img src="https://www.google.com.tr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""></div>
+        <div id="logo2"> <img src="https://www.google.com.tr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="" width="180" height="62"></div>
+    <div class="arama">
+    <form >
+    <input type="text" placeholder="Arama yap..."  id="icon" >
+    <!--position özeliğiyle iconları arama kutusu üzerine aldım-->
+    <span class="fas fa-keyboard" style="position:relative; left: -40px; top: 5px; " id="key" Title=" Ekran Klavyesi Aç"  ></span>
+<span class="fas fa-microphone" style="position:relative; left: -90px; top: 5px; color: navy;" id="mic" Title=" Sesli Arama" ></span>
+</form> 
+<div id="btnlr">
+ <a href="https://www.google.com/doodles"> <button type="submit"> Google'da Ara </button></a>
+ <a href="https://www.google.com/doodles"> <button type="submit" > Kendimi Şanslı Hisediyorum </button></a></div>
+</div> </div>
+
+<!-- alt menüleri google anasayfasında ve google anasayfa mobil görünümüne uygun şekle getirdim -->
+<div class="altmenuler"><div id="kutu"><div>
+ <ul class="altmenu">
+                <li> <a href="https://about.google/?utm_source=google-TR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Hakkında</a></li>
+                <li> <a href="https://www.google.com.tr/intl/tr_tr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Reklam</a> </li>
+                <li> <a href="https://www.google.com.tr/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">İşletme</a> </li>
+</ul>  
+</div>
+<div class="slogan" style="color: black;"><a href="https://sustainability.google/intl/tr/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=" style="text-decoration: none;">
+                        <i class="fab fa-pagelines" style="font-size:x-large; color: chartreuse;"></i>
+                        2007'den bugüne karbon nötr </a>
+</div>
+<div>
+<ul class="altmenu" >
+                <li> <a href="https://policies.google.com/privacy?hl=tr&fg=1">Arama Nasıl Çalışır?</a> </li>
+                <li> <a href="https://policies.google.com/terms?hl=tr&fg=1">Şartlar</a> </li>	
+                <li> <a href="https://www.google.com.tr/preferences?hl=tr&fg=1">Ayarlar</a> </li>	
+</ul> </div> </div>
+</div></label></body> </html>
